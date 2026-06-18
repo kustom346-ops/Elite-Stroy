@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты | Elite-Stroy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ИНТРО -->
+    <div class="intro">
+        <div class="intro-content">
+            <div class="intro-logo"><span class="logo-light">ELITE</span><span class="logo-gold">STROY</span></div>
+            <div class="intro-line"></div>
+            <div class="intro-subtitle">Премиальное строительство</div>
+            <div class="intro-progress"><div class="intro-progress-bar"></div></div>
+        </div>
+    </div>
+
+    <!-- ПЕРЕХОД СТРАНИЦ -->
+    <div class="page-transition"></div>
+
+    <!-- КАСТОМНЫЙ КУРСОР -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <a href="index.html" class="logo">
+                    <span class="logo-light">ELITE</span><span class="logo-gold">STROY</span>
+                </a>
+                <nav class="nav" id="navMenu">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О компании</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="projects.html" class="active">Проекты</a>
+                    <a href="contact.html">Контакты</a>
+                </nav>
+                <a href="tel:+79991234567" class="header-phone">+7 (999) 123-45-67</a>
+                <button class="burger" id="burgerBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li>Проекты</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920');">
+            <div class="page-header-content reveal-up">
+                <h1>Наши проекты</h1>
+                <p>Портфолио реализованных объектов</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="filter-row reveal-up">
+                    <button class="filter-btn active" data-filter="all">Все проекты</button>
+                    <button class="filter-btn" data-filter="residential">Жилые</button>
+                    <button class="filter-btn" data-filter="commercial">Коммерческие</button>
+                    <button class="filter-btn" data-filter="industrial">Промышленные</button>
+                </div>
+
+                <div class="projects-grid-large">
+                    
+                    <div class="project-item reveal-scale delay-1" data-category="residential">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="ЖК Элитный">
+                        <div class="project-item-overlay">
+                            <span class="project-cat">Жилое строительство</span>
+                            <h3>ЖК "Элитный"</h3>
+                            <p>Многоэтажный жилой комплекс премиум-класса в центре Москвы</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Москва</span>
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                                <span><i class="fas fa-ruler"></i> 25 000 м²</span>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-gold">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item reveal-scale delay-2" data-category="commercial">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop" alt="БЦ Премиум">
+                        <div class="project-item-overlay">
+                            <span class="project-cat">Коммерческое строительство</span>
+                            <h3>БЦ "Премиум"</h3>
+                            <p>Бизнес-центр класса А в деловом районе Санкт-Петербурга</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Санкт-Петербург</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-ruler"></i> 15 000 м²</span>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-gold">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item reveal-scale delay-3" data-category="residential">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="Коттеджный поселок">
+                        <div class="project-item-overlay">
+                            <span class="project-cat">Жилое строительство</span>
+                            <h3>Коттеджный поселок "Сосны"</h3>
+                            <p>Элитный коттеджный поселок в экологически чистом районе Подмосковья</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Подмосковье</span>
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                                <span><i class="fas fa-ruler"></i> 50 га</span>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-gold">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item reveal-scale delay-4" data-category="industrial">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" alt="Логистический центр">
+                        <div class="project-item-overlay">
+                            <span class="project-cat">Промышленное строительство</span>
+                            <h3>Логистический центр</h3>
+                            <p>Современный логистический комплекс с автоматизированными системами</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Казань</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-ruler"></i> 30 000 м²</span>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-gold">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item reveal-scale delay-5" data-category="commercial">
+                        <img src="https://images.unsplash.com/photo-1519567770579-c2fc90e4c2a3?w=800&h=600&fit=crop" alt="Торговый центр">
+                        <div class="project-item-overlay">
+                            <span class="project-cat">Коммерческое строительство</span>
+                            <h3>ТРЦ "Гранд"</h3>
+                            <p>Торгово-развлекательный центр с кинотеатром и фудкортом</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Екатеринбург</span>
+                                <span><i class="fas fa-calendar"></i> 2022</span>
+                                <span><i class="fas fa-ruler"></i> 45 000 м²</span>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-gold">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item reveal-scale delay-6" data-category="residential">
+                        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&h=600&fit=crop" alt="Таунхаусы">
+                        <div class="project-item-overlay">
+                            <span class="project-cat">Жилое строительство</span>
+                            <h3>Квартал таунхаусов</h3>
+                            <p>Комплекс из 30 таунхаусов с собственной инфраструктурой</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Сочи</span>
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                                <span><i class="fas fa-ruler"></i> 12 000 м²</span>
+                            </div>
+                            <a href="project-detail.html" class="btn btn-gold">Подробнее</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-light">ELITE</span><span class="logo-gold">STROY</span>
+                    </a>
+                    <p>Строим будущее с 2009 года.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@elite-stroy.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Соцсети</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elite-Stroy</p>
+                <a href="#" class="scroll-top"><i class="fas fa-chevron-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
