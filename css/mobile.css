@@ -1,0 +1,818 @@
+/* ============================================ */
+/* ========== МОБИЛЬНАЯ ВЕРСИЯ ========== */
+/* ============================================ */
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    
+    .container {
+        padding: 0 25px;
+    }
+    
+    /* Header */
+    .header {
+        padding: 15px 0;
+    }
+    
+    .header-row {
+        flex-wrap: wrap;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 400px;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 1000;
+        border-left: 1px solid rgba(201, 169, 110, 0.2);
+    }
+    
+    .nav.open {
+        right: 0;
+    }
+    
+    .nav a {
+        font-size: 18px;
+        letter-spacing: 3px;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.5s ease;
+    }
+    
+    .nav.open a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .nav.open a:nth-child(1) { transition-delay: 0.1s; }
+    .nav.open a:nth-child(2) { transition-delay: 0.2s; }
+    .nav.open a:nth-child(3) { transition-delay: 0.3s; }
+    .nav.open a:nth-child(4) { transition-delay: 0.4s; }
+    .nav.open a:nth-child(5) { transition-delay: 0.5s; }
+    
+    /* Оверлей для мобильного меню */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .burger {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .header-phone {
+        display: none;
+    }
+    
+    /* Hero */
+    .hero {
+        height: 100vh;
+        min-height: 600px;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+    
+    .hero-text {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-btns .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Sections */
+    section {
+        padding: 80px 0;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 30px 15px;
+    }
+    
+    .stat-number {
+        font-size: 38px;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .service-img {
+        height: 180px;
+    }
+    
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .project-card {
+        height: 300px;
+    }
+    
+    /* Advantages */
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* About */
+    .about-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Contact */
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    /* Projects page */
+    .projects-grid-large {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-item {
+        height: 400px;
+    }
+    
+    /* Services page */
+    .service-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .service-num {
+        font-size: 50px;
+    }
+    
+    /* Team */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Numbers */
+    .numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Additional */
+    .additional-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    /* Gallery */
+    .gallery-main img {
+        height: 350px;
+    }
+    
+    /* Detail */
+    .detail-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .detail-sidebar {
+        position: static;
+    }
+    
+    /* Page header */
+    .page-header h1 {
+        font-size: 38px;
+    }
+    
+    /* Кнопки */
+    .btn {
+        padding: 14px 28px;
+        font-size: 12px;
+    }
+}
+
+/* Телефоны (до 768px) */
+@media (max-width: 768px) {
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header */
+    .header {
+        padding: 12px 0;
+    }
+    
+    .logo {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    
+    /* Hero */
+    .hero {
+        height: 100vh;
+        min-height: 550px;
+        text-align: center;
+    }
+    
+    .hero-badge {
+        font-size: 10px;
+        padding: 8px 15px;
+        letter-spacing: 2px;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    
+    .hero-text {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 0 auto 30px;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        padding: 16px 24px;
+        font-size: 12px;
+    }
+    
+    /* Sections */
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+    
+    .section-label::before,
+    .section-label::after {
+        width: 20px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .section-subtitle {
+        font-size: 14px;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        padding: 25px 10px;
+    }
+    
+    .stat-icon {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .stat-number {
+        font-size: 32px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-img {
+        height: 200px;
+    }
+    
+    .service-body h3 {
+        font-size: 18px;
+    }
+    
+    .service-body p {
+        font-size: 13px;
+    }
+    
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        height: 350px;
+    }
+    
+    .project-info h4 {
+        font-size: 20px;
+    }
+    
+    /* Advantages */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .advantage-card {
+        padding: 30px 25px;
+    }
+    
+    .advantage-icon {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .advantage-card h3 {
+        font-size: 17px;
+    }
+    
+    /* CTA */
+    .cta h2 {
+        font-size: 26px;
+    }
+    
+    .cta p {
+        font-size: 14px;
+    }
+    
+    /* About */
+    .about-text h2 {
+        font-size: 26px;
+    }
+    
+    .about-mission {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .mission-box {
+        padding: 20px;
+    }
+    
+    .about-img::before {
+        top: -10px;
+        right: -10px;
+    }
+    
+    /* Numbers */
+    .numbers-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .number-box {
+        padding: 25px 15px;
+    }
+    
+    .number-value {
+        font-size: 36px;
+    }
+    
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Services page */
+    .service-block {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+    
+    .service-num {
+        font-size: 40px;
+    }
+    
+    .service-block h2 {
+        font-size: 24px;
+    }
+    
+    .service-block ul li {
+        font-size: 14px;
+    }
+    
+    /* Projects page */
+    .filter-row {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .project-item {
+        height: 350px;
+    }
+    
+    .project-item-overlay {
+        padding: 25px;
+    }
+    
+    .project-item-overlay h3 {
+        font-size: 22px;
+    }
+    
+    .project-meta {
+        gap: 10px;
+    }
+    
+    .project-meta span {
+        font-size: 11px;
+    }
+    
+    /* Contact */
+    .contact-info h1 {
+        font-size: 28px;
+    }
+    
+    .contact-details {
+        gap: 20px;
+    }
+    
+    .contact-item {
+        padding: 12px;
+    }
+    
+    .contact-icon-box {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contact-form-wrap {
+        padding: 25px 20px;
+    }
+    
+    .contact-form-wrap h2 {
+        font-size: 22px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    /* Gallery */
+    .gallery-main img {
+        height: 250px;
+    }
+    
+    .gallery-thumbs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .gallery-thumbs img {
+        height: 70px;
+    }
+    
+    /* Detail */
+    .project-detail-header h1 {
+        font-size: 28px;
+    }
+    
+    .project-detail-meta {
+        gap: 15px;
+    }
+    
+    .project-detail-meta span {
+        font-size: 12px;
+    }
+    
+    .detail-text h2 {
+        font-size: 24px;
+    }
+    
+    .detail-text h3 {
+        font-size: 20px;
+    }
+    
+    .specs-list {
+        columns: 1;
+    }
+    
+    .detail-sidebar {
+        padding: 20px;
+    }
+    
+    /* Page header */
+    .page-header {
+        height: 35vh;
+        min-height: 280px;
+    }
+    
+    .page-header h1 {
+        font-size: 30px;
+    }
+    
+    .page-header p {
+        font-size: 16px;
+    }
+    
+    /* Breadcrumbs */
+    .breadcrumbs {
+        padding: 90px 0 15px;
+    }
+    
+    .breadcrumbs ul li {
+        font-size: 12px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-col h4 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 12px 24px;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+    
+    .center-btn {
+        margin-top: 30px;
+    }
+    
+    /* Map */
+    .map-wrap {
+        height: 350px;
+    }
+    
+    /* Additional */
+    .additional-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .additional-card {
+        padding: 25px 15px;
+    }
+    
+    .additional-card i {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .additional-card h3 {
+        font-size: 15px;
+    }
+    
+    .additional-card p {
+        font-size: 12px;
+    }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+    
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-badge {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+    
+    .hero-title {
+        font-size: 26px;
+    }
+    
+    .hero-text {
+        font-size: 13px;
+    }
+    
+    .hero-btns .btn {
+        padding: 14px 20px;
+        font-size: 11px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 10px;
+    }
+    
+    .project-card {
+        height: 280px;
+    }
+    
+    .project-item {
+        height: 280px;
+    }
+    
+    .nav a {
+        font-size: 16px;
+    }
+    
+    .page-header h1 {
+        font-size: 24px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 9px;
+    }
+    
+    .gallery-main img {
+        height: 200px;
+    }
+    
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+
+/* ============================================ */
+/* ========== МОБИЛЬНЫЕ ФИЧИ ========== */
+/* ============================================ */
+
+/* Touch-friendly элементы */
+@media (hover: none) and (pointer: coarse) {
+    
+    /* Увеличиваем область нажатия */
+    .nav a,
+    .btn,
+    .filter-btn,
+    .footer-social a,
+    .contact-social a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Отключаем hover эффекты */
+    .service-card:hover,
+    .advantage-card:hover,
+    .team-card:hover,
+    .stat-item:hover,
+    .project-card:hover,
+    .additional-card:hover {
+        transform: none;
+    }
+    
+    .service-card:active,
+    .advantage-card:active,
+    .team-card:active,
+    .stat-item:active {
+        transform: scale(0.98);
+    }
+    
+    /* Кастомный курсор скрыт */
+    .cursor,
+    .cursor-dot {
+        display: none !important;
+    }
+    
+    body, a, button, .btn, input, textarea, select {
+        cursor: auto;
+    }
+}
+
+/* ============================================ */
+/* ========== МОБИЛЬНОЕ МЕНЮ АНИМАЦИЯ ========== */
+/* ============================================ */
+.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Затемнение фона при открытом меню */
+.nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.nav-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
